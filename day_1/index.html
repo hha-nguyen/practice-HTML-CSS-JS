@@ -6,18 +6,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <script src="script.js"></script>
   <title>Product card</title>
 </head>
 <body>
   <div class="card">
-    <div class="card__heart"></div>
-    <div class="card__cart"></div>
-    <div class="card__img"></div>
-    <div class="card__title"></div>
-    <div class="card__price"></div>
-    <div class="card__size"></div>
-    <div class="card__color"></div>
-    <div class="card__action"></div>
+    <div class="card__heart">
+      <i class='bx bx-heart'></i>
+    </div>
+    <div class="card__cart">
+      <i class='bx bx-cart-alt' ></i>
+    </div>
+    <div class="card__img">
+      <img src="./images/shoe_img.png" alt="">
+    </div>
+    <div class="card__title">
+      Balenciaga Triple S Sneaker Green 544351 W2GR1 3801
+    </div>
+    <div class="card__price">
+      34,000,000₫
+    </div>
+    <div class="card__size">
+      <h3>Size:</h3>
+      <span>6</span>
+      <span>7</span>
+      <span>8</span>
+      <span>9</span>
+  </div>
+  <div class="card__color">
+    <h3>Color:</h3>
+    <span class="card__color--green"></span>
+    <span class="card__color--red"></span>
+  </div>
+  <div class="card__action">
+    <button>Buy now</button>
+    <button>Add to cart</button>
   </div>
 </body>
 </html>
