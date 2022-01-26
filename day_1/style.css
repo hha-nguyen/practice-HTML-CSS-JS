@@ -12,6 +12,7 @@
 body {
     height: 100vh;
     background: linear-gradient(to right, #4daf54, #3d8880);
+    /* background: linear-gradient(to right, #8eb9ee, #557db4); */
     font-family: "Poppins";
 }
 
@@ -38,6 +39,7 @@ body {
 .card__cart{
     left: unset;
     right: 20px;
+    z-index: 2;
 }
 
 .card__img{
@@ -87,18 +89,18 @@ body {
     align-items: center;
 }
 
-.card__color--green, .card__color--red{
+.card__color--green, .card__color--blue{
     width: 20px;
     height: 20px;
     border-radius: 50%;
     margin: 20px;
 }
 .card__color--green{
-    background: var(--primary-color);
+    background: #4daf54;
 }
 
-.card__color--red{
-    background-color: red;
+.card__color--blue{
+    background: #8eb9ee;
 }
 
 .card__action button{
