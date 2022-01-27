@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@100&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+
+:root{
+    --pink-color: #e26e70;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(45deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 50%, rgb(255, 204, 112) 100%);
+
+}
+
+#open {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 20px 40px;
+    transform: translate(-50%, -50%);
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    border-radius: 6px;
+    border: 0;
+    background-color: white;
+    box-shadow: 0 0 5px #aba4a4;
+    outline: none;
+    cursor: pointer;
+}
+
+#open:hover{
+    background-color: var(--pink-color);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+}
+
+.modal__inner {
+    position: relative;
+    top: 50%;
+    width: 400px;
+    margin: auto;
+    background: inherit;
+}
+
+.modal__header{
+    background: var(--pink-color);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    border-radius: 6px 6px 0 0;
+}
+
+.modal__body {
+    background: white;
+    padding: 15px;
+}
+
+.modal__body h2{
+    color: var(--pink-color);
+}
+
+.modal__footer {
+    background: white;
+    padding: 15px;
+    border-radius: 0 0 6px 6px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal__header i, .modal__footer #close{
+    cursor: pointer;
+}
+
+.modal__footer #close {
+    padding: 6px 20px;
+    border-radius: 6px;
+    border: none;
+    background: var(--pink-color);
+    color: white;
+}
+
+.modal__hidden {
+    display: none;
+}
