@@ -47,10 +47,11 @@ body {
 
 .modal__inner {
     position: relative;
-    top: 50%;
+    top: 326px;
     width: 400px;
     margin: auto;
     background: inherit;
+    animation: modalShow 0.3s linear;
 }
 
 .modal__header{
@@ -91,6 +92,18 @@ body {
     color: white;
 }
 
-.modal__hidden {
+.hide {
     display: none;
+}
+
+@keyframes modalShow {
+    from {
+        top: -400px;
+        opacity: 0;
+    }
+
+    to {
+        top: 329px;
+        opacity: 1;
+    }
 }
