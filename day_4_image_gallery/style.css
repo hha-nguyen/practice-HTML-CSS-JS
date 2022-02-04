@@ -1,15 +1,15 @@
-:root {
+:root{
     --font-size-icon: 50px;
 }
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 62.5%;
 }
 
-body {
+body{
     background: #dadada;
     height: 100vh;
     align-items: center;
@@ -17,7 +17,7 @@ body {
     display: flex;
 }
 
-.wrapper {
+.wrapper{
     width: 120rem;
     display: grid;
     grid-template-columns: repeat(4, 22rem);
@@ -31,52 +31,54 @@ body {
     align-content: center;
 }
 
-#image-1 {
+#image-1{
     grid-area: img1;
 }
 
-#image-2 {
+#image-2{
     grid-area: img2;
 }
 
-#image-3 {
+#image-3{
     grid-area: img3;
 }
 
-#image-4 {
+#image-4{
     grid-area: img4;
 }
 
-#image-5 {
+#image-5{
     grid-area: img5;
 }
 
-#image-6 {
+#image-6{
     grid-area: img6;
 }
 
-#image-7 {
+#image-7{
     grid-area: img7;
 }
 
-#image-8 {
+#image-8{
     grid-area: img8;
 }
 
-#image-1, #image-2, #image-3, #image-4, #image-5, #image-6, #image-7, #image-8 {
+.image{
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+    cursor: pointer;
     overflow: hidden;
     border-radius: 6px;
 }
 
-img:not(.gallery-inner){
+.image img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition: 0.4s;
 }
-
-img:not(.img-inner):hover{ 
+.image:hover{ 
     transform: scale(1.2);
 }
 
@@ -89,15 +91,19 @@ img:not(.img-inner):hover{
     background: rgba(0, 0, 0, 0.8);
     z-index: 1;
     display: flex;
+    opacity: 0;
+    transition: 0.5s;
+    transform: scale(0.8);
+    pointer-events: none;
 }
 
-.gallery .show {
+.gallery.show{
     opacity: 1;
     pointer-events: auto;
-    display: flex;
+    transform: scale(1);
 }
 
-.gallery-inner {
+.gallery-inner{
     width: 70%;
     height: 70%;
     margin: auto;
@@ -111,27 +117,32 @@ img:not(.img-inner):hover{
     object-position: center;
 }
 
-.control {
+.control{
     position: absolute;
     -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     color: rgba(255, 255, 255, 0.8);
     cursor: pointer;
     top: 50%;
+    opacity: 0;
 }
-.prev {
+.prev{
     left: 50px;
     font-size: 10rem;
 }
-.next {
+.next{
     right: 15px;
     font-size: 10rem;
 }
-.fa-times {
+.fa-times{
     font-size: 35px;
     position: fixed;
     top: 15px;
     right: 25px;
     cursor: pointer;
     color: #fff;
+}
+.prev.show, .next.show{
+    opacity: 1;
+    pointer-events: auto;
 }
