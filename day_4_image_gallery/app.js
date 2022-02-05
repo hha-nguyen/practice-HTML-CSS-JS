@@ -30,8 +30,11 @@ next.addEventListener('click', () => {
 });
 
 closeGallery.addEventListener('click', hide);
+document.addEventListener('keydown', e => {
+    if(e.keyCode == 27) gallery.classList.remove('show'); 
+});
 function hide() {
     gallery.classList.remove('show');
-}
+};
 
 

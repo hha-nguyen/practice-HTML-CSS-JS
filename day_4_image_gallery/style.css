@@ -125,6 +125,7 @@ body{
     cursor: pointer;
     top: 50%;
     opacity: 0;
+    pointer-events: none;
 }
 .prev{
     left: 50px;
