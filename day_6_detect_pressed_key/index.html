@@ -6,18 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detected pressed key</title>
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+    <script defer src="app.js"></script>
     <script src="https://kit.fontawesome.com/c201ae82ec.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <p class="alert hide">Press any key</p>
     <div class="box hide">
-        <p class="box__result">0</p>
+        <p class="box__result"></p>
         <div class="box__detail">
-            <div class="card key"></div>
-            <div class="card location"></div>
-            <div class="card code"></div>
-            <div class="card which"></div>
+            <div class="card key">
+                <p class="card__name">Key</p>
+                <p class="card__value"></p>
+            </div>
+            <div class="card location">
+                <p class="card__name">Location</p>
+                <p class="card__value"></p>
+            </div>
+            <div class="card which">
+                <p class="card__name">Which</p>
+                <p class="card__value"></p>
+            </div>
+            <div class="card code">
+                <p class="card__name">Code</p>
+                <p class="card__value"></p>
+            </div>
         </div>
     </div>
 </body>
