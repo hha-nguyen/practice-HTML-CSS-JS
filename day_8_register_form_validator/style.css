@@ -38,7 +38,7 @@ form{
 }
 
 .form-control{
-    margin: 4rem 0 4rem 0;
+    margin: 4rem 0 5rem 0;
     border-bottom: 0.3rem solid #adadad;
     position: relative;
 }
@@ -99,9 +99,31 @@ input[type="submit"]:hover{
     color: #666666;
 }
 .signup_link a{
+    position: relative;
     font-size: 1.6rem;
     color: var(--success-color);
     text-decoration: none;
+    transition: 0.3s;
+}
+.signup_link a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0%;
+    border-bottom: 0.2rem solid var(--success-color); 
+}
+.signup_link:hover a::before{
+    animation: width 0.3s forwards;  
+}
+
+@keyframes width {
+    from {
+    }
+    to {
+        left: 0;
+        width: 100%;
+    }
 }
 
 
