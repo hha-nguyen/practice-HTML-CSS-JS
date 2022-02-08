@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
     <script src="https://kit.fontawesome.com/c201ae82ec.js" crossorigin="anonymous"></script>
-    <title>toast notification</title>
+    <title>Preview image</title>
 </head>
 <body>
-    <div class="control">
-        <button class="success">Show Success</button>
-        <button class="warning">Show Warning</button>
-        <button class="error">Show Error</button>
+    <div class="wrapper">
+        <label for="input-img" class="preview">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <span>Upload to preview image</span>
+        </label>
+        <input type="file" hidden id="input-img">
     </div>
-    <div id="toasts"></div>
 </body>
 </html>

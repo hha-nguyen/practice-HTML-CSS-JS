@@ -1,1 +1,185 @@
 @import url('https://fonts.googleapis.com/css2?family=Livvic:wght@100&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+:root{
+    --green: rgb(0, 128, 0);
+    --yellow: rgb(255, 165, 0);
+    --red: rgb(255, 0, 0);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 10px;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ecf0f1;
+}
+
+button{
+    position: relative;
+    margin-inline: 2rem;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    border: none;
+    color: #fff;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.control .success{
+    background: var(--green);
+}
+.control .warning{
+    background: var(--yellow);
+}
+.control .error{
+    background: var(--red);
+}
+
+.control .success::before{
+    content: '';
+    position: absolute;
+    background: var(--green);
+    inset: 0;
+    z-index: -1;
+    transition: 0.2s;
+}
+.control .success:hover::before{
+    content: '';
+    background: black;
+    opacity: 0.2;
+}
+
+.control .warning::before{
+    content: '';
+    position: absolute;
+    background: var(--yellow);
+    inset: 0;
+    z-index: -1;
+    transition: 0.2s;
+}
+.control .warning:hover::before{
+    content: '';
+    background: black;
+    opacity: 0.2;
+}
+
+.control .error::before{
+    content: '';
+    position: absolute;
+    background: var(--red);
+    inset: 0;
+    z-index: -1;
+    transition: 0.2s;
+}
+.control .error:hover::before{
+    content: '';
+    background: black;
+    opacity: 0.2;
+}
+
+#toasts{
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.toast{
+    padding: 2rem;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    animation: show_slide 1s ease forwards;
+    border-left: 0.6rem solid;
+}
+
+.toast.success{
+    background-color: rgba(0, 128, 0, 0.4);
+    border-color: rgb(0, 128, 0);
+}
+.toast.warning {
+	background-color: rgba(255, 165, 0, 0.4);
+	border-color: rgb(255, 165, 0);
+}
+.toast.error {
+	background-color: rgba(255, 0, 0, 0.4);
+	border-color: rgb(255, 0, 0);
+}
+
+.toast i{
+    font-size: 3rem;
+    color: #fff;
+}
+
+.toast .messeage{
+    padding: 0 2rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.countdown{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    z-index: 1;
+    animation: countdown 4s linear forwards;
+}
+
+.toast.success .countdown{
+    background-color: rgba(0, 128, 0, 0.4);
+}
+.toast.warning .countdown{
+    background-color: rgba(255, 165, 0, 0.4);
+}
+.toast.error .countdown{
+    background-color: rgba(255, 0, 0, 0.4);
+}
+
+@keyframes show_slide{
+    0%{
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(-10%);
+    }
+    80%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-10%);
+    }
+}
+@keyframes hide_slide{
+    0%{
+        transform: translateX(-10%);
+    }
+    40%{
+        transform: translateX(0%);
+    }
+    80%{
+        transform: translateX(-10%);
+    }
+    100%{
+        transform: translateX(120%);    
+    }
+}
+@keyframes countdown{
+    20%{
+        width: 100%;
+    }
+    100%{
+        width: 0%;
+    }
+}
