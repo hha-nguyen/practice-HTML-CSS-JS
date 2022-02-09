@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@100&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 10px;
+}
+
+body{
+    height: 100vh;
+    background: #8a66b4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter{
+    margin: 3rem;
+    padding: 2rem 7rem;
+    background: #6b38b6;
+    border-radius: 15px;
+    color: #fff;
+    text-align: center;
+    border: 3px solid black;
+    box-shadow: 0 15px rgba(0, 0, 0);
+    cursor: pointer;
+}
+.counter:hover{
+    background: #4d1f92;
+}
+
+.counter > h1{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.counter > h3{
+    font-size: 5rem;
+}
+

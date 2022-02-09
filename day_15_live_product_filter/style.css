@@ -12,4 +12,93 @@ body {
     width: 100%;
     height: 100vh;
     background: #dadada;
+    text-align: center;
 }
+
+.container{
+    width: 40rem;
+    margin: 8rem auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+
+header{
+    padding: 1.5rem 2rem;
+}
+
+.title{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.form-input > *{
+    font-size: 1.5rem;
+}
+
+.form-input{
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 5px;
+}
+.form-input i{
+    padding: 1rem;
+}
+.form-input input{
+    width: 100%;
+    border: 0;
+    outline: 0;
+}
+
+.products{
+    margin-top: 15px;
+    width: 100%;
+    overflow-y: auto;
+    max-height: 40rem;
+}
+
+h3{
+    padding: 8px 20px;
+    font-size: 2rem;
+}
+
+.product{
+    display: flex;
+    align-items: center;
+    padding: 8px 20px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    height: 10rem;
+    transition: 0.3s;
+}
+
+.product:hover{
+    background-color: #ddd;
+}
+.product:hover img{
+    transform: scale(1.5);
+}
+
+.product img{
+    object-fit: cover;
+    object-position: center;
+    width: 5rem;
+    margin-right: 2rem;
+}
+
+.product h4{
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.product p{
+    font-size: 1.6rem;
+}
+
+.hide{
+    display: none;
+}
+
