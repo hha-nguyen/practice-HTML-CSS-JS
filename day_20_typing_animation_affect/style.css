@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@100&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", monospace;
+    font-size: 10px;
+}
+
+body{
+    background: #000;
+}
+
+.text-typing{
+    margin: 20rem auto;
+}
+
+.text-typing p{
+    color: #96ee1c;
+    font-size: 4rem;
+    font-weight: 800;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 8s steps(30) infinite, blink 1s infinite;
+    text-shadow: 0 0 100px #96ee1c;
+}
+
+@keyframes typing{
+    0%, 100%{
+        width: 0%;
+    } 
+    70%, 90%{
+        width: 100%;
+    }
+}
+
+@keyframes blink{
+    0%, 100%{
+        border-right: 10px solid transparent;
+    }
+    50%{
+        border-right: 10px solid #96ee1c;
+    }
+}
