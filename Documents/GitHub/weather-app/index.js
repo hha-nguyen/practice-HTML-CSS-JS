@@ -5,6 +5,7 @@ import {} from 'dotenv/config';
 
 const app = express();
 const port = process.env.PORT || 3000;
+// const port = process.env.PORT || config.httpPort;
 app.listen(port, () => console.log(`starting server at ${port}`));
 // app.listen(3000, () => console.log('listening at 3000'));
 app.use(express.static('public'));
@@ -20,7 +21,7 @@ app.get('/api', (request, response) => {
       return;
     }
     response.json(data);
-    console.log(data);
+    // console.log(data);
   });
 });
 
