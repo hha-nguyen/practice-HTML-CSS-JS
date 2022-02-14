@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+:root{
+    --facebook-color: #3b5999;
+	--instagram-color: #e1306c;
+	--youtube-color: #de463b;
+	--twitter-color: #46c1f6;
+	--github-color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins" ,sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #dadada;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon{
+    margin-inline: 1em;
+    position: relative;
+    cursor: pointer;
+}
+
+.icon i {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    height: 2em;
+    font-size: 25px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+}
+
+.tool-tip{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5em 1em;
+    font-size: 20px;
+    border-radius: 3em;
+    color: #fff;
+    font-weight: 500;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+}
+
+.tool-tip::before{
+    content: '';
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    bottom: -6px;
+    transform: translateX(-50%) rotate(45deg);
+    left: 50%;
+    z-index: -2;
+}
+
+.tool-tip, .icon i{
+    transition: 0.3s;
+}
+
+.icon:hover .tool-tip{
+    top: -170%;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.icon:hover i{
+    color: #fff;
+}
+
+.facebook .tool-tip::before,
+.facebook:hover i, 
+.facebook .tool-tip {
+    background: var(--facebook-color);
+}
+
+.github .tool-tip::before,
+.github:hover i, 
+.github .tool-tip {
+    background: var(--github-color);
+}
+
+.twitter .tool-tip::before,
+.twitter:hover i, 
+.twitter .tool-tip {
+    background: var(--twitter-color);
+}
+
+.instagram .tool-tip::before,
+.instagram:hover i, 
+.instagram .tool-tip {
+    background: var(--instagram-color);
+}
+
+.youtube .tool-tip::before,
+.youtube:hover i, 
+.youtube .tool-tip {
+    background: var(--youtube-color);
+}
